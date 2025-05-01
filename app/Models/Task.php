@@ -2,7 +2,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Enums\TaskStatus;
+use App\Enums\TaskStatusEnum;
 
 class Task extends Model
 {
@@ -14,7 +14,7 @@ class Task extends Model
     ];
 
     protected $casts = [
-        'status' => TaskStatus::class,
+        'status' => TaskStatusEnum::class,
     ];
 
     public function user()
